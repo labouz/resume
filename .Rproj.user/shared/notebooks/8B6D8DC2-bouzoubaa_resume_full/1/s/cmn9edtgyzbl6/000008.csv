@@ -1,0 +1,12 @@
+"0"," bind_rows(guest,
+   detailed_entries(
+    what = ""Tearing Down Barriers to Publication with R Markdown"",
+    when = ""2020"",
+    with = ""Florida International Univeristy"",
+    where = ""Miami"",
+    why = ""Seminar presented to FIU graduated students on how to use R for publications, dissertations, blogs using packages such as rmarkdown, knitr, bookdown, pagedown, xariangan "")
+  )
+"
+"2","Error in map(edu_exprs[-5], rlang::eval_tidy, data = data) : 
+  argument ""data"" is missing, with no default
+"

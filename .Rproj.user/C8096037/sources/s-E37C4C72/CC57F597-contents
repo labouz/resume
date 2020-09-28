@@ -1,0 +1,99 @@
+---
+name: Layla
+surname: Bouzoubaa
+position: "Data Scientist"
+address: "Miami, FL"
+phone: +1 404 409 4968
+profilepic: me.jpg
+www: laylab.me
+email: "layla.bzb@gmail.com"
+twitter: bouzoulay
+github: labouz
+linkedin: layla-bouzoubaa
+aboutme: "Public Health researcher specializing in cancer and substance abuse; also with large project management experience. Open to exploring new domains."
+docname: "resume_bouzoubaa"
+output:
+ vitae::cv_document:
+    template: twentysecond_skill.tex
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+library(dplyr)
+source(file = here::here("LB_20secs/data","me_data.R"))
+```
+
+
+# Education
+
+```{r}
+edu <- do.call("rbind",
+  rorcid::orcid_educations("0000-0002-6616-0950")$`0000-0002-6616-0950`$`affiliation-group`$summaries
+)
+edu %>%
+  detailed_entries(
+    what = `education-summary.role-title`,
+    when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
+    with = `education-summary.organization.name`,
+    where = `education-summary.organization.address.city`
+  )
+```
+
+# Experience
+
+```{r}
+
+work %>% 
+  detailed_entries(
+    what = title,
+    with = unit,
+    why = detail,
+    when = if_else(!is.na(startYear),glue::glue("{startYear} - {endYear}",.na = ""), ""),
+    where = where
+  )
+
+# work %>%
+#   detailed_entries(
+#     with = title,
+#     what = unit,
+#     why = detail,
+#     when = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
+#     where = where
+#   )
+```
+
+# Honors
+
+```{r}
+honors %>%
+  detailed_entries(
+    what = area,
+    why = detail,
+    when = year,
+    where = where
+  )
+
+# honors %>%
+#   detailed_entries(
+#     with = area,
+#     what = accomplishment,
+#     why = detail,
+#     when = year,
+#     where = where
+#   )
+```
+
+# Certifications
+
+```{r}
+certifications %>%
+  detailed_entries(
+    #with = area,
+    what = area,
+    why = detail,
+    when = year,
+    where = where
+  )
+```

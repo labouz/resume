@@ -1,0 +1,7 @@
+"0","knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)"
+"0","library(vitae)"
+"0","library(tibble)"
+"0","library(dplyr)"
+"0","source(file = here::here(""LB_20secs/data"",""me_data.R""))"
+"2","Error: Can't create column `endMonth`: Can't combine `..1` <character> and `..9` <double>.
+"

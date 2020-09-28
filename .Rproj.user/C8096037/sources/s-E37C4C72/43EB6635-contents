@@ -1,0 +1,8 @@
+.httr-oauth
+*.docx
+ds_resume.Rmd
+*.pdf
+templates/
+*.Rproj
+.Rhistory
+.html

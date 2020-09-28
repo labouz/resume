@@ -1,0 +1,7 @@
+"0","longCommute <- get_acs(geography = ""county"",
+               variables = c(over90 = ""B08303_013""), #lets also name is something english
+               state = 12, #FIPS code for FL
+               year = 2018) #defaults to 2018 = average of the past 5 years
+"
+"2","Getting data from the 2014-2018 5-year ACS
+"

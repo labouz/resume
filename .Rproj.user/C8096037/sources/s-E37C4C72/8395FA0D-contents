@@ -1,0 +1,118 @@
+---
+name: Layla
+surname: Bouzoubaa
+position: "Data Scientist"
+address: "Miami, FL"
+phone: +1 404 409 4968
+profilepic: me.jpg
+www: laylab.me
+email: "layla.bzb@gmail.com"
+twitter: bouzoulay
+github: labouz
+linkedin: layla-bouzoubaa
+docname: "cv_bouzoubaa"
+output: vitae::awesomecv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+library(dplyr)
+source(file = here::here("LB_20secs/data","me_data.R"))
+```
+
+# Summary
+
+Public health data scientist with a focus on cancer and substance abuse. Open to exploring new domains.
+
+# Education
+
+```{r}
+edu <- do.call("rbind",
+  rorcid::orcid_educations("0000-0002-6616-0950")$`0000-0002-6616-0950`$`affiliation-group`$summaries
+)
+edu %>%
+  detailed_entries(
+    what = `education-summary.role-title`,
+    when = glue::glue("{`education-summary.start-date.year.value`} - {`education-summary.end-date.year.value`}"),
+    with = `education-summary.organization.name`,
+    where = `education-summary.organization.address.city`
+  )
+```
+
+# Experience
+
+```{r}
+work %>% 
+  detailed_entries(
+    what = title,
+    with = unit,
+    why = detail,
+    when = if_else(!is.na(startYear),glue::glue("{startYear} - {endYear}",.na = ""), ""),
+    where = where
+  )
+```
+
+# Teaching Experience
+
+```{r}
+teach <- do.call("rbind",
+  rorcid::orcid_invited_positions("0000-0002-6616-0950")$`0000-0002-6616-0950`$`affiliation-group`$summaries[1]
+)
+teach %>% 
+  detailed_entries(
+    what = `invited-position-summary.role-title`,
+    when = glue::glue("{`invited-position-summary.start-date.year.value`} - present"),
+    with = `invited-position-summary.organization.name`,
+    where = `invited-position-summary.organization.address.city`,
+    why = "Teach computational data science methods to graduate students in a modular format that follows the basic components of a data pipeline. Primary topics included: version control with git and GitHub, building Shiny applications - theory and applied, building interactive visualizations, working with geospatial data."
+  )
+```
+# Invited Lectures and Presentations
+
+```{r}
+guest %>% 
+  detailed_entries(
+    what = title,
+    with = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} - {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+```
+
+# Publications
+
+```{r}
+scholar::get_publications(id = "MnpEwBkAAAAJ") %>% 
+  #filter(cites > 30) %>% 
+  distinct(title, .keep_all = TRUE) %>%
+  transmute(bibtype = "Article", author = as.character(author),
+            title = as.character(title),
+            journaltitle = as.character(journal), year, key = row_number()) %>% 
+  RefManageR::as.BibEntry() %>% 
+  RefManageR::WriteBib("lb.bib")
+
+bibliography_entries("lb.bib")
+```
+
+# Certifications
+
+```{r}
+certifications %>%
+  detailed_entries(
+    #with = area,
+    what = area,
+    why = detail,
+    when = year,
+    where = where
+  )
+```
+
+# Active Outreach
+
+ - R-Ladies Miami - Organizer
+ - Google Developer Groups Miami - Organizer
+ - WomenTechnmakers - Ambassador
+ - #IamRemarkable - Facilitator
