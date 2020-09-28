@@ -1,24 +1,24 @@
 {
-    "id": "43EB6635",
+    "id": "86DE69C3",
     "path": "~/Records/personal/resume/.gitignore",
     "project_path": ".gitignore",
     "type": "gitignore",
-    "hash": "3901625652",
+    "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1601293205392.0,
+    "created": 1601293607377.0,
     "source_on_save": false,
     "relative_order": 5,
     "properties": {
-        "cursorPosition": "4,10",
+        "cursorPosition": "7,6",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1601293372,
+    "lastKnownWriteTime": 1601293611,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1601293372200,
+    "last_content_update": 1601293611173,
     "read_only": false,
     "read_only_alternatives": []
 }
