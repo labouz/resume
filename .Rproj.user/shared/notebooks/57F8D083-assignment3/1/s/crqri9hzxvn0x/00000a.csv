@@ -1,5 +1,0 @@
-"0","places_info <- income_filter %>% 
-  left_join(no_insurance_filter[c(""NAME"",""estimate"")])
-"
-"2","Joining, by = c(""NAME"", ""estimate"")
-"

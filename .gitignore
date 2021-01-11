@@ -7,3 +7,4 @@ templates/
 .Rhistory
 *.html
 ds_resume_files/
+.Rproj.user

@@ -1,6 +1,10 @@
 {
-    "path": "~/Records/personal/resume",
+    "path": "~/Records/personal/resume/bouzoubaa_resume_full2",
     "sortOrder": [
+        {
+            "columnIndex": 4,
+            "ascending": false
+        },
         {
             "columnIndex": 2,
             "ascending": true
