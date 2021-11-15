@@ -7,5 +7,8 @@ templates/
 .Rhistory
 *.html
 ds_resume_files/
-.Rproj.user/
-
+*.Rproj.user/C8096037
+cover_letters/
+.Rproj.user
+.RData
+.Ruserdata
