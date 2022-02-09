@@ -1,6 +1,5 @@
 .httr-oauth
 *.docx
-ds_resume.Rmd
 *.pdf
 templates/
 *.Rproj
@@ -9,6 +8,9 @@ templates/
 ds_resume_files/
 *.Rproj.user/C8096037
 cover_letters/
-.Rproj.user
+.Rproj.user/*
+.Rproj.user/
 .RData
 .Ruserdata
+.Rproj.user
+inspo/
