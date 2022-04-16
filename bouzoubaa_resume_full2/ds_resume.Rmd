@@ -276,8 +276,17 @@ June 2020
 R Balise,  **L Bouzoubaa**, E Nunes, S Luo, D Feaster
 
 
-Local Presentations {data-icon=comment-alt}
+Invited Presentations & Lectures {data-icon=comment-alt}
 --------------------------------------------------------------------------------
+### [What Goes Around Comes Back Around: Benifit of Community Involvment](https://www.canva.com/design/DAE9BQhU0iM/o2hfsxr772JjhnWuoJ5C7g/edit?utm_content=DAE9BQhU0iM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+Guest Lecturer for University of Miami EPH 607 - Health Communications.  
+Description: You are surrounded by potential opportunities just waiting around the corner. Can you find them? This talk will provide tips on how to harness the power of community for scientific or career-focused aspirations. This talk will hopefully motivate students to get a jump (if they haven’t already) on establishing an online and physical presence to help them build a fruitful network of their peers. This talk will take students through several examples based on personal experiences as well as engage students to share their own experiences to develop a collective knowledge base of tips and tricks.
+
+Online
+
+April 2022
+
+**L Bouzoubaa**
 
 ### [Introduction to Public Health Data Science with the R Programming Language](https://github.com/labouz/RESET_INTRO_DS)
 A Workshop given to the attendees of the NSF Re-enter STEM Through Emerging Technology (RESET). The workshop was open to all levels of participants and given twice for a duration of 1.5 hours each. This workshop employs computational data science techniques covering the first 4 main steps of a typical data science pipeline - acquisition, Tidying/Manipulation, Transformation, and Visualization/Communication. All material are accessible on GitHub and work space environments were created on RStudio Cloud for participants who were unfamiliar with the RStudio IDE.
